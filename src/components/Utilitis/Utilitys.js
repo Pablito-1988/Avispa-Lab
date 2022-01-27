@@ -7,7 +7,7 @@ const Utilitys = () => {
       <h2 className="sugarTitle">Utilidades</h2>
         <Link className="utilityLink" to='/sugar'>Azucar</Link>
         <Link className="utilityLink" to='/mash'>Agua para mash</Link>
-        <Link className="utilityLink" to='/rule'>Reglas</Link>
+        <Link className="utilityLink" to='/rule'>Regla</Link>
 
       </div>
   </div>;

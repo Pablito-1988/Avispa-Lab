@@ -10,7 +10,7 @@ const NavBar = () => {
             <i className="fas fa-home"></i>
           </div>
         </Link>
-        <h1 className="title">Avispa</h1>
+        <h1 className="title">Avispa - Lab</h1>
         <div className="dropdown">
           <button className="dropbtn"><i className="fas fa-bars"></i></button>
           <div className="dropdown-content">
