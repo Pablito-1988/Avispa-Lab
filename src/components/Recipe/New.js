@@ -1,6 +1,9 @@
 import firebaseApp from "../../firebase";
+import './recipe.css'
 import { Formik, Form, ErrorMessage } from "formik";
 import {getFirestore, doc, setDoc } from "firebase/firestore";
+import { useRef } from "react";
+import functions from "../../functions/Math";
 const firestore = getFirestore(firebaseApp);
 
 const New = () => {
@@ -11,6 +14,9 @@ const New = () => {
       (today.getMonth() + 1) +
       "/" +
       today.getFullYear();
+      
+ 
+
   return (
     <div className="newRecipe">
       <h2 className="newRecipeTitle">Nueva receta</h2>
@@ -59,7 +65,7 @@ const New = () => {
         {({ handleChange }) => (
           <Form>
             <div className="newRecipeForm">
-              <label>Tipo de cerveza</label>
+              <label className="">Tipo de cerveza</label>
               <input
                 type="text"
                 onChange={handleChange}
@@ -77,6 +83,7 @@ const New = () => {
                 id="kg"
                 className="kgInput"
                 placeholder="Ej. 5.5kg"
+                
               />
               <ErrorMessage name="kg" component="span" className="error" />
               <label>Densidad inicial receta</label>
