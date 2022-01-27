@@ -1,0 +1,66 @@
+.sugarContainer, .ruleContainer{
+    height: 100vh;
+    background-color: dodgerblue;
+}
+
+.sugarForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    justify-content: space-around;
+    margin-top: 50px;
+    
+}
+Form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.sugarTitle{
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+label{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+.submitButton{
+    margin-top: 1rem;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+}
+.beerQty , .grainQty ,.ltQty{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+}
+.totalStyle{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: white;
+}
+.utilityContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: dodgerblue;
+    
+}
+.utilityLink{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
