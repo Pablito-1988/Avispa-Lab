@@ -6,6 +6,8 @@ const Home = () => {
   console.log (functions.sugar(10, 2));
   return <div>
       <Link to='/utilitys'>Utilidades</Link>
+      <Link to='/new'>Nueva receta</Link>
+
   </div>;
 };
 

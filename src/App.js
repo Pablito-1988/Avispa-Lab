@@ -6,6 +6,7 @@ import Utilitys from './components/Utilitis/Utilitys';
 import Sugar from './components/Utilitis/Sugar';
 import Mash from './components/Utilitis/Mash';
 import Rule from './components/Utilitis/Rule';
+import New from './components/Recipe/New';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/sugar" component={Sugar} />
         <Route path="/mash" component={Mash} />
         <Route path="/rule" component={Rule} />
+        <Route path="/new" component={New} />
       </Switch>
   </>
   );
