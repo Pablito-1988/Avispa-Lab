@@ -1,13 +1,11 @@
 import './style.css'
-import functions from '../../functions/Math';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  console.log (functions.sugar(10, 2));
-  return <div>
-      <Link to='/utilitys'>Utilidades</Link>
-      <Link to='/new'>Nueva receta</Link>
-
+  
+  return <div className='homeContainer'>
+      <Link className='homeLink' to='/utilitys'>Utilidades</Link>
+      <Link className='homeLink' to='/new'>Nueva Cocción</Link>
   </div>;
 };
 

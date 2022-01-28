@@ -1,0 +1,15 @@
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: dodgerblue;
+    padding-top: 10px;
+}
+.homeLink{
+    margin-top: 20px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}

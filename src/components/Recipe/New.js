@@ -19,7 +19,7 @@ const New = () => {
 
   return (
     <div className="newRecipe">
-      <h2 className="newRecipeTitle">Nueva receta</h2>
+      <h2 className="newRecipeTitle">Nueva Cocción</h2>
       <Formik
         initialValues={{
           fecha: date,
@@ -65,7 +65,7 @@ const New = () => {
         {({ handleChange }) => (
           <Form>
             <div className="newRecipeForm">
-              <label className="">Tipo de cerveza</label>
+              <label className="newRecipeLabel">Tipo de cerveza</label>
               <input
                 type="text"
                 onChange={handleChange}
@@ -75,7 +75,7 @@ const New = () => {
                 placeholder="Ej. IPA"
               />
               <ErrorMessage name="name" component="span" className="error" />
-              <label>Cantidad de granos</label>
+              <label className="newRecipeLabel">Cantidad de granos</label>
               <input
                 type="number"
                 onChange={handleChange}
@@ -86,7 +86,7 @@ const New = () => {
                 
               />
               <ErrorMessage name="kg" component="span" className="error" />
-              <label>Densidad inicial receta</label>
+              <label className="newRecipeLabel">Densidad inicial receta</label>
               <input
                 type="number"
                 onChange={handleChange}
@@ -96,7 +96,7 @@ const New = () => {
                 placeholder="Ej. 1.055"
               />
               <ErrorMessage name="dir" component="span" className="error" />
-              <label>PH </label>
+              <label className="newRecipeLabel">PH </label>
               <input
                 type="number"
                 onChange={handleChange}
@@ -106,7 +106,7 @@ const New = () => {
                 placeholder="Ej. 5.55"
               />
               <ErrorMessage name="ph" component="span" className="error" />
-              <label>Tiempo de macerado </label>
+              <label className="newRecipeLabel">Tiempo de macerado </label>
               <input
                 type="number"
                 onChange={handleChange}
@@ -116,7 +116,7 @@ const New = () => {
                 placeholder="Ej. 90 min"
               />
               <ErrorMessage name="time" component="span" className="error" />
-              <label>Cantidad de lupulo</label>
+              <label className="newRecipeLabel">Cantidad de lupulo</label>
               <input
                 type="number"
                 onChange={handleChange}
@@ -126,7 +126,7 @@ const New = () => {
                 placeholder="Ej. 90 g"
               />
               <ErrorMessage name="lupulo" component="span" className="error" />
-              <label>Densidad Inicial Cocción</label>
+              <label className="newRecipeLabel">Densidad Inicial Cocción</label>
               <input
                 type="number"
                 onChange={handleChange}
