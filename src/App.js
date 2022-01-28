@@ -8,6 +8,7 @@ import Mash from './components/Utilitis/Mash';
 import Rule from './components/Utilitis/Rule';
 import New from './components/Recipe/New';
 import Footer from './components/Footer/Footer';
+import Hisotry from './components/Recipe/Hisotry';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/mash" component={Mash} />
         <Route path="/rule" component={Rule} />
         <Route path="/new" component={New} />
+        <Route path="/history" component={Hisotry} />
       </Switch>
       <Footer />
   </>
