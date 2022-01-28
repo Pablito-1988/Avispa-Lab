@@ -7,6 +7,7 @@ import Sugar from './components/Utilitis/Sugar';
 import Mash from './components/Utilitis/Mash';
 import Rule from './components/Utilitis/Rule';
 import New from './components/Recipe/New';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/rule" component={Rule} />
         <Route path="/new" component={New} />
       </Switch>
+      <Footer />
   </>
   );
 }
