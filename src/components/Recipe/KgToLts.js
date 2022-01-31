@@ -8,7 +8,8 @@ const KgToLts = (props) => {
   return <div>
         <p className='mashTotal'>{kg} lts</p>
         <p className='mashTotal'>Regla</p>
-        <p className='mashTotal'>{cm} cm</p>
+        {cm !== 34 && <p className='mashTotal'>{cm} cm</p>}
+        
   </div>;
 };
 

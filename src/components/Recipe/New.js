@@ -145,10 +145,11 @@ const New = () => {
                 step='any'
               />
               <ErrorMessage name="dic" component="span" className="error" />
-              <h4 className="newRecipeTitle">Cocción</h4>
+              <h3 className="newRecipeTitle">Cocción</h3>
+              <h4 className="newRecipeTitle">1° Parte macerado</h4>
               <label className="newRecipeLabel">Agua para mash</label>
               <KgToLts grainKg= {grainKg} />
-              <label className="newRecipeLabel">Temporizador maserado</label>
+              <label className="newRecipeLabel">Temporizador</label>
               <Temp time= {mashTime} />
               <div>
                 <button type="submit">Crear Coccion</button>

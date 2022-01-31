@@ -1,25 +1,30 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import functions from "../../functions/Math";
+
+
 const Temp = (props) => {
   const time = Number(props.time);
    
    console.log(time)
-    const [counter, setCounter] = useState('');
-    
+    const [counter, setCounter] = useState(0);
+    const [start , setStart] = useState(false);
+
+    function startButton (){
+        setStart(true);
+        setCounter(time)    
+    }
    
     useEffect(() => {
-        
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-    }, [time ,counter ]);
+    }, [ start , time ,counter ]);
   
    
   
   return (
     <div>
       <p className="mashTotal">{time} min</p>
-      <p className="mashTotal">{counter}</p>
-      <button type="button"  >
+      {start ? <p className="mashTotal">{counter} min</p> : ''} 
+      <button type="button" onClick={()=>{startButton()}} >
         Empezar
       </button>
     </div>
