@@ -9,10 +9,10 @@ const functions = {
         } ,
     lts:
         function( qty ){
-            return ((qty * 1.1) - 34);    
+            return (34 - (qty * 1.1));    
         }
 }
 
 export default functions
 
-console.log(functions.lts(20))
+

@@ -2,8 +2,9 @@ import firebaseApp from "../../firebase";
 import './recipe.css'
 import { Formik, Form, ErrorMessage } from "formik";
 import {getFirestore, doc, setDoc } from "firebase/firestore";
-import { useRef } from "react";
-import functions from "../../functions/Math";
+import {  useState } from "react";
+import KgToLts from "./KgToLts";
+import Temp from "./Temp";
 const firestore = getFirestore(firebaseApp);
 
 const New = () => {
@@ -14,12 +15,15 @@ const New = () => {
       (today.getMonth() + 1) +
       "/" +
       today.getFullYear();
-      
+
+   const [grainKg , setGrainKg] = useState(0);
+   const [mashTime , setMashTime] = useState(0);
  
 
   return (
     <div className="newRecipe">
       <h2 className="newRecipeTitle">Nueva Cocción</h2>
+      <h4 className="newRecipeTitle">Datos de receta</h4>
       <Formik
         initialValues={{
           fecha: date,
@@ -62,7 +66,7 @@ const New = () => {
           setDoc(docuref, values)
         }}
       >
-        {({ handleChange }) => (
+        {({ handleChange, values }) => (
           <Form>
             <div className="newRecipeForm">
               <label className="newRecipeLabel">Tipo de cerveza</label>
@@ -78,13 +82,14 @@ const New = () => {
               <label className="newRecipeLabel">Cantidad de granos</label>
               <input
                 type="number"
-                onChange={handleChange}
+                onChange={ (e)=>{setGrainKg(e.target.value); handleChange(e)}} 
                 name="kg"
                 id="kg"
                 className="kgInput"
                 placeholder="Ej. 5.5kg"
-                
+                step='any'
               />
+              
               <ErrorMessage name="kg" component="span" className="error" />
               <label className="newRecipeLabel">Densidad inicial receta</label>
               <input
@@ -94,6 +99,7 @@ const New = () => {
                 id="dir"
                 className="dirInput"
                 placeholder="Ej. 1.055"
+                step='any'
               />
               <ErrorMessage name="dir" component="span" className="error" />
               <label className="newRecipeLabel">PH </label>
@@ -104,12 +110,13 @@ const New = () => {
                 id="ph"
                 className="phInput"
                 placeholder="Ej. 5.55"
+                step='any'
               />
               <ErrorMessage name="ph" component="span" className="error" />
               <label className="newRecipeLabel">Tiempo de macerado </label>
               <input
                 type="number"
-                onChange={handleChange}
+                onChange={ (e)=>{setMashTime(e.target.value); handleChange(e)}} 
                 name="time"
                 id="time"
                 className="timeInput"
@@ -124,6 +131,7 @@ const New = () => {
                 id="lupulo"
                 className="lupuloInput"
                 placeholder="Ej. 90 g"
+                step='any'
               />
               <ErrorMessage name="lupulo" component="span" className="error" />
               <label className="newRecipeLabel">Densidad Inicial Cocción</label>
@@ -134,8 +142,14 @@ const New = () => {
                 id="dic"
                 className="dicInput"
                 placeholder="Ej. 1.055"
+                step='any'
               />
               <ErrorMessage name="dic" component="span" className="error" />
+              <h4 className="newRecipeTitle">Cocción</h4>
+              <label className="newRecipeLabel">Agua para mash</label>
+              <KgToLts grainKg= {grainKg} />
+              <label className="newRecipeLabel">Temporizador maserado</label>
+              <Temp time= {mashTime} />
               <div>
                 <button type="submit">Crear Coccion</button>
               </div>
