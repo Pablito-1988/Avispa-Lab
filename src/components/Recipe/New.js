@@ -96,8 +96,9 @@ const New = () => {
         onSubmit={(values) => {
           console.log('hola')
           console.log(values);
-          const docuref = doc(firestore, "recetas", values.name);
+          const docuref = doc(firestore, "recetas", values.nombre);
           setDoc(docuref, values);
+          
         }}
       >
         {({ handleChange }) => (
@@ -264,12 +265,12 @@ const New = () => {
                   setSabor(e.target.value);
                   handleChange(e);
                 }}
-                name="templupuloamargor"
+                name="timerlupulosabor"
                 id="time"
                 className="timeInput"
                 placeholder="Ej. 60 min"
               />
-              <ErrorMessage name="templupuloamargor" component="span" className="error" />
+              <ErrorMessage name="timerlupulosabor" component="span" className="error" />
               <Temp time={sabor} />
               <label className="newRecipeLabel">Lupulo aroma</label>
               <input
