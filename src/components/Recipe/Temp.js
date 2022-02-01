@@ -28,7 +28,7 @@ const Temp = (props) => {
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000); //1minuto son 60000 milisegundos
     }, [ start , time ,counter ]);
   
-   if(counter === 0){
+   if(counter === 1){
          music.current.play()   
        setTimeout(() => 
         music.current.pause()
@@ -42,7 +42,7 @@ const Temp = (props) => {
       <button type="button" className="startButton" ref={desapear} onClick={()=>{startButton()}} >
       <i className="fas fa-play-circle"></i>
       </button>
-      <audio ref={music}  src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3" autoPlay></audio>
+      <audio ref={music}  src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3" ></audio>
       <button type="button" ref={musicStop}className="stopButton" onClick={()=>{stopButton()}}><i className="fas fa-stop"></i></button>
     </div>
   );
