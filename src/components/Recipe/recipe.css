@@ -35,3 +35,21 @@
     font-weight: bold;
     margin-top: 0;
 }
+.startButton{
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    color: white;
+}
+
+input{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: black;
+
+}
