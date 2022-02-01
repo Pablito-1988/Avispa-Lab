@@ -10,11 +10,18 @@ const Temp = (props) => {
     const [start , setStart] = useState(false);
     const desapear = useRef(null);
     const music = useRef(null);
-
+    const musicStop = useRef(null);
+    
     function startButton (){
         setStart(true);
         setCounter(time)
+        musicStop.current.style.display = "block";
         desapear.current.style.display = "none";    
+    }
+    function stopButton (){
+        music.current.pause()
+        desapear.current.style.display = "block";
+        musicStop.current.style.display = "none"; 
     }
    
     useEffect(() => {
@@ -35,7 +42,8 @@ const Temp = (props) => {
       <button type="button" className="startButton" ref={desapear} onClick={()=>{startButton()}} >
       <i className="fas fa-play-circle"></i>
       </button>
-      <audio ref={music} src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3" autoPlay></audio>
+      <audio ref={music}  src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3" autoPlay></audio>
+      <button type="button" ref={musicStop}className="stopButton" onClick={()=>{stopButton()}}><i className="fas fa-stop"></i></button>
     </div>
   );
 };

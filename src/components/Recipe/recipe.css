@@ -43,6 +43,15 @@
     font-size: 50px;
     color: white;
 }
+.stopButton{
+    display: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    color: white;
+}
 
 input{
     width: 100px;
