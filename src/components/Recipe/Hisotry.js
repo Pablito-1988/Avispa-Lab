@@ -1,10 +1,46 @@
+import firebaseApp from "../../firebase";
+import { getFirestore, collection, docs, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
+const firestore = getFirestore(firebaseApp);
 
 
 
+const  Hisotry =    () => {
+   const [data, setData] = useState([]); 
+  const [loading, setLoading] = useState(true); 
+  useEffect(() => {
+  const allRecipes = getDocs( collection (firestore, "recetas"));
+  allRecipes.then(recipes => {
+    setData(recipes.docs.map(doc => doc.data()));
+  });
+  setLoading(false);
+  }, []);
+  
 
-const Hisotry = () => {
+  
+  
+  console.log(data)
+    
+  /* console.log(allRecipes) */
   return <div>
     <h2 className="historyTitle">Historial</h2>
+    {loading ? (
+      <div>
+        <p>Cargando...</p>
+      </div>
+    ) : (
+      <div className="history">
+        {data.map(recipe => (
+          <div className="historyItem" key={recipe.name}>
+            <div className="historyItemLeft">
+              <p>{recipe.name}</p>
+              <p>{recipe.fecha}</p>
+             </div>
+           </div>
+        ))}
+        </div>   
+    )}
+
   </div>;
 };
 
