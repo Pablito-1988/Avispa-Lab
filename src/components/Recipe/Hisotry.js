@@ -16,8 +16,6 @@ const  Hisotry =    () => {
   setLoading(false);
   }, []);
   
-
-  
   
   console.log(data)
     
@@ -31,9 +29,9 @@ const  Hisotry =    () => {
     ) : (
       <div className="history">
         {data.map(recipe => (
-          <div className="historyItem" key={recipe.name}>
+          <div className="historyItem" key={recipe.fecha}>
             <div className="historyItemLeft">
-              <p>{recipe.name}</p>
+              <p>{recipe.nombre}</p>
               <p>{recipe.fecha}</p>
              </div>
            </div>
