@@ -9,6 +9,7 @@ import Rule from './components/Utilitis/Rule';
 import New from './components/Recipe/New';
 import Footer from './components/Footer/Footer';
 import Hisotry from './components/Recipe/Hisotry';
+import Recipe from './components/Recipe/Recipe';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/rule" component={Rule} />
         <Route path="/new" component={New} />
         <Route path="/history" component={Hisotry} />
+        <Route path="/recipe/:id" component={Recipe} />
       </Switch>
       <Footer />
   </>

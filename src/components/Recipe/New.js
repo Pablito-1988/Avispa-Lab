@@ -1,10 +1,10 @@
-import firebaseApp from "../../firebase";
 import "./recipe.css";
 import { Formik, Form, ErrorMessage } from "formik";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
 import { useState } from "react";
 import KgToLts from "./KgToLts";
 import Temp from "./Temp";
+import firebaseApp from "../../firebase";
 const firestore = getFirestore(firebaseApp);
 
 const New = () => {
@@ -15,6 +15,9 @@ const New = () => {
       (today.getMonth() + 1) +
       "/" +
       today.getFullYear();
+
+  const id1 = Date.now();
+  const id = id1.toString()
 
   const [grainKg, setGrainKg] = useState(0);
   const [mashTime, setMashTime] = useState(0);
@@ -30,6 +33,7 @@ const New = () => {
       <h3 className="newRecipeTitle">Datos de receta</h3>
       <Formik
         initialValues={{
+          id: id,
           fecha: date,
           nombre: "",
           kg: 0,
@@ -96,9 +100,9 @@ const New = () => {
         onSubmit={(values) => {
           console.log('hola')
           console.log(values);
-          const docuref = doc(firestore, "recetas", values.nombre);
+          const docuref = doc(firestore, "recetas",values.id);
           setDoc(docuref, values);
-          
+  
         }}
       >
         {({ handleChange }) => (
