@@ -20,7 +20,7 @@ const  Hisotry =    () => {
   console.log(data)
     
   /* console.log(allRecipes) */
-  return <div>
+  return <div className="historyTag">
     <h2 className="historyTitle">Historial</h2>
     {loading ? (
       <div>

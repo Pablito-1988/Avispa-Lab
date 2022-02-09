@@ -5,6 +5,13 @@
     
     background-color: dodgerblue;
 }
+.historyTag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: dodgerblue;
+}
 .newRecipeForm{
     display: flex;
     flex-direction: column;
@@ -12,7 +19,7 @@
     
     justify-content: space-around;
 }
-.newRecipeMainTitle{
+.newRecipeMainTitle, .historyTitle{
     text-align: center;
     color: white;
 }
