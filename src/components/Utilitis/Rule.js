@@ -23,7 +23,7 @@ const Rule = () => {
             return errors;
           }}
           onSubmit={(values) => {
-            console.log(values);
+            
             setQty(functions.lts(values.ltQty));
           }}
         >

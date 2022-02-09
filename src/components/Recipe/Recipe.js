@@ -6,7 +6,6 @@ const firestore = getFirestore(firebaseApp);
 
 const Recipe = () => {
     const { id } = useParams();
-    
     const [recipe, setRecipe] = useState({});
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -16,7 +15,6 @@ const Recipe = () => {
         });
         setLoading(false);
     }, [id]);
-    console.log(recipe)
   return <div className="recipeTag">
     {loading ? (
         <div>
@@ -29,10 +27,10 @@ const Recipe = () => {
             <p className='recipeInfo'>Cantidad de granos: {recipe.kg}kg</p>
             <p className='recipeInfo'>Cantidad de lupulos: {recipe.lupulo}g</p>
             <p className='recipeInfo'>Cantidad de lupulo amargor: {recipe.lupuloamargor}g</p>
-            <p className='recipeInfo'>Cantidad de lupulo aroma: {recipe.lupuloaroma}g</p>
-            <p className='recipeInfo'>Timer lupulo aroma: {recipe.timerlupuloroma}min</p>
             <p className='recipeInfo'>Cantidad de lupulo sabor: {recipe.lupulosabor}g</p>
             <p className='recipeInfo'>Timer lupulo sabor: {recipe.timerlupulosabor}min</p>
+            <p className='recipeInfo'>Cantidad de lupulo aroma: {recipe.lupuloaroma}g</p>
+            <p className='recipeInfo'>Timer lupulo aroma: {recipe.timerlupuloroma}min</p>
             <p className='recipeInfo'>Densidad inicial receta: {recipe.dir}</p>
             <p className='recipeInfo'>Tiempo de macerado: {recipe.time}min</p>
             <p className='recipeInfo'>Tiempo de cocción: {recipe.boilingtime}min</p>

@@ -54,7 +54,6 @@ const New = () => {
         }}
         validate={(values) => {
           const errors = {};
-          console.log(errors)
           if (!values.nombre) {
             errors.nombre = "Requerido";
           }
@@ -98,8 +97,6 @@ const New = () => {
           return errors;
         }}
         onSubmit={(values) => {
-          console.log('hola')
-          console.log(values);
           const docuref = doc(firestore, "recetas",values.id);
           setDoc(docuref, values);
   

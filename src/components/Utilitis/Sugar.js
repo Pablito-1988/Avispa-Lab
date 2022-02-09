@@ -24,7 +24,7 @@ const Sugar = () => {
             return errors;
           }}
           onSubmit={(values) => {
-            console.log(values);
+           
             setQty(functions.sugar(values.beerQty));
           }}
         >

@@ -19,14 +19,14 @@ const  Hisotry =    () => {
   }, []);
   
   
-  console.log(data)
+  
     
-  /* console.log(allRecipes) */
+  
   return <div className="historyTag">
     <h2 className="historyTitle">Historial</h2>
     {loading ? (
       <div>
-        <p>Cargando...</p>
+        <p>No hay cocciones</p>
       </div>
     ) : (
       <div className="history">

@@ -23,7 +23,7 @@ const Water = () => {
             return errors;
           }}
           onSubmit={(values) => {
-            console.log(values);
+            
             setQty(functions.water(values.grainQty));
           }}
         >
