@@ -2,7 +2,6 @@ import firebaseApp from "../../firebase";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import NavBar from "../NavBar/NavBar";
 const firestore = getFirestore(firebaseApp);
 
 
