@@ -2,6 +2,7 @@ import firebaseApp from "../../firebase";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
 const firestore = getFirestore(firebaseApp);
 
 
@@ -32,7 +33,7 @@ const  Hisotry =    () => {
         {data.map(recipe => (
           <div className="historyItem" key={recipe.id}>
             <div className="historyItemLeft">
-              <p className="historyInfo">{recipe.nombre}</p>
+              <NavLink to={`/recipe/${recipe.id}`}><p className="historyInfo">{recipe.nombre}</p></NavLink>
               <NavLink to={`/recipe/${recipe.id}`}><p className="historyInfo">{recipe.fecha}</p></NavLink>
              </div>
            </div>
