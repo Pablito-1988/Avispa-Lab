@@ -6,7 +6,7 @@ const firestore = getFirestore(firebaseApp);
 
 const Recipe = () => {
     const { id } = useParams();
-    console.log(id)
+    
     const [recipe, setRecipe] = useState({});
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -15,7 +15,7 @@ const Recipe = () => {
             setRecipe(recipe.data());
         });
         setLoading(false);
-    }, []);
+    }, [id]);
     console.log(recipe)
   return <div className="recipeTag">
     {loading ? (

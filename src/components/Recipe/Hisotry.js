@@ -32,8 +32,8 @@ const  Hisotry =    () => {
         {data.map(recipe => (
           <div className="historyItem" key={recipe.id}>
             <div className="historyItemLeft">
-              <p>{recipe.nombre}</p>
-              <NavLink to={`/recipe/${recipe.id}`}><p>{recipe.fecha}</p></NavLink>
+              <p className="historyInfo">{recipe.nombre}</p>
+              <NavLink to={`/recipe/${recipe.id}`}><p className="historyInfo">{recipe.fecha}</p></NavLink>
              </div>
            </div>
         ))}

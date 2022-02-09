@@ -89,8 +89,31 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 .recipeInfo{
     color: white;
     font-size: 20px;
+}
+.history{
+    width: 100%;
+}
+.historyItemLeft{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+.historyInfo{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+.historyItem{
+    width: 100%;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
 }
