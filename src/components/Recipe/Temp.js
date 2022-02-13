@@ -21,7 +21,7 @@ const Temp = (props) => {
   }
 
   useEffect(() => {
-    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000); //1minuto son 60000 milisegundos
+    counter > 0 && setTimeout(() => setCounter(counter - 1), 60000); //1minuto son 60000 milisegundos
   }, [start, time, counter]);
 
   if (counter === 1) {
