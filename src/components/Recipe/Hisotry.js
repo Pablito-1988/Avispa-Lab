@@ -25,7 +25,7 @@ const  Hisotry =    () => {
     <h2 className="historyTitle">Historial</h2>
     {loading ? (
       <div>
-        <p>No hay cocciones</p>
+        <p className="historyTitle">No hay cocciones</p>
       </div>
     ) : (
       <div className="history">

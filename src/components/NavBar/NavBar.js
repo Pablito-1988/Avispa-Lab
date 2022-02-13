@@ -14,7 +14,7 @@ const NavBar = () => {
         <div className="dropdown">
           <button className="dropbtn"><i className="fas fa-bars"></i></button>
           <div className="dropdown-content">
-            <Link to="/utilitys">Utilidades</Link>
+            <Link id='navLink' to="/utilitys">Utilidades</Link>
           </div>
         </div>
       </nav>
