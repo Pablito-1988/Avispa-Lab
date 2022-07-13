@@ -38,15 +38,15 @@ const  Hisotry =    () => {
       </div>
     ) : (
       <div className="history">
-        {data.map(recipe => (
+        {data.length > 0 ?  data.map(recipe => (
           <div className="historyItem" key={recipe.id}>
             <div className="historyItemLeft">
-              
               <NavLink to={`/recipe/${recipe.id}`}><p className="historyInfo">{recipe.nombre}</p></NavLink>
               <NavLink to={`/recipe/${recipe.id}`}><p className="historyInfo">{recipe.fecha}</p></NavLink>
              </div>
            </div>
-        ))}
+        )) : <p className="historyInfo">Cargando datos....</p>}
+        
         </div>   
     )}
 

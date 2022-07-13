@@ -116,6 +116,9 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(238,231,40,0.88
 }
 .history{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .historyItemLeft{
     display: flex;
