@@ -22,7 +22,16 @@ const  Hisotry =    () => {
     
   
   return <div className="historyTag">
-    <h2 className="historyTitle">Historial</h2>
+    <h1 className="historyTitle">Historial</h1>
+    <div className="historyContainer">
+      <p className="historyInfo">
+        Nombre
+      </p>
+      <p className="historyInfo">Fecha</p>
+     
+      </div>
+       <span className="divisorHistory"></span>
+
     {loading ? (
       <div>
         <p className="historyTitle">No hay cocciones</p>
@@ -32,6 +41,7 @@ const  Hisotry =    () => {
         {data.map(recipe => (
           <div className="historyItem" key={recipe.id}>
             <div className="historyItemLeft">
+              
               <NavLink to={`/recipe/${recipe.id}`}><p className="historyInfo">{recipe.nombre}</p></NavLink>
               <NavLink to={`/recipe/${recipe.id}`}><p className="historyInfo">{recipe.fecha}</p></NavLink>
              </div>

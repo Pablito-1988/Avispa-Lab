@@ -29,8 +29,8 @@ const New = () => {
 
   return (
     <div className="newRecipe">
-      <h2 className="newRecipeMainTitle">Nueva Cocción</h2>
-      <h3 className="newRecipeTitle">Datos de receta</h3>
+      <h1 className="newRecipeMainTitle">Nueva Cocción</h1>
+      <h2 className="newRecipeTitle">Datos de receta</h2>
       <Formik
         initialValues={{
           id: id,
@@ -175,7 +175,7 @@ const New = () => {
                 placeholder="Ej. 90 g"
                 step="any"
               />
-              <label className="newRecipeLabel">Cantidad de sabor</label>
+              <label className="newRecipeLabel">Cantidad de lupulo sabor</label>
               <input
                 type="number"
                 onChange={handleChange}
@@ -185,7 +185,7 @@ const New = () => {
                 placeholder="Ej. 90 g"
                 step="any"
               />
-              <label className="newRecipeLabel">Cantidad de aroma</label>
+              <label className="newRecipeLabel">Cantidad de lupulo aroma</label>
               <input
                 type="number"
                 onChange={handleChange}
@@ -195,13 +195,15 @@ const New = () => {
                 placeholder="Ej. 90 g"
                 step="any"
               />
-              <h2 className="newRecipeMainTitle">Cocción</h2>
-              <h4 className="newRecipeTitle">1° Parte macerado</h4>
+              <span className="divisor"></span>
+              <h1 className="newRecipeMainTitle">Cocción</h1>
+              <h2 className="newRecipeTitle">1° Parte macerado</h2>
               <label className="newRecipeLabel">Agua para mash</label>
               <KgToLts grainKg={grainKg} />
               <label className="newRecipeLabel">Temporizador macerado</label>
               <Temp time={mashTime} />
-              <h4 className="newRecipeTitle">2° Parte lavado de granos</h4>
+              <span className="divisor"></span>
+              <h2 className="newRecipeTitle">2° Parte lavado de granos</h2>
               <label className="newRecipeLabel">Densidad a 20 lts</label>
               <input
                 type="number"
@@ -228,7 +230,8 @@ const New = () => {
                 component="span"
                 className="error"
               />
-              <h4 className="newRecipeTitle">3° Parte hervido y lupulado</h4>
+              <span className="divisor"></span>
+              <h2 className="newRecipeTitle">3° Parte hervido y lupulado</h2>
               <p>Recordar que para 20l son 12cm</p>
               <label className="newRecipeLabel">Tiempo de hervido </label>
               <input
@@ -287,7 +290,8 @@ const New = () => {
               />
               <ErrorMessage name="timerlupuloroma" component="span" className="error" />
               <Temp time={aroma} />
-              <h4 className="newRecipeTitle">4° Parte mediciones finales de cocción</h4>
+              <span className="divisor"></span>
+              <h2 className="newRecipeTitle">4° Parte mediciones finales de cocción</h2>
               <label className="newRecipeLabel">Densidad final de cocción</label>
               <input
                 type="number"
