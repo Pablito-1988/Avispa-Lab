@@ -41,7 +41,7 @@ const Rule = () => {
           )}
         </Formik>
 
-        <p className='totalStyle' >Total: {qty} cm</p>
+        <p className='totalStyle' >Total: {qty} cm (de arriba para abajo)</p>
       </div>
   </div>;
 };
