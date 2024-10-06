@@ -41,7 +41,8 @@ const Water = () => {
           )}
         </Formik>
 
-        <p className='totalStyle' >Total: {qty} lts</p>
+        <p className='totalStyle' >Total: {qty[0]} lts</p>
+        <p className='totalStyle' >Total: {qty[1]} cm ( de arriba para abajo)</p>
       </div>
 
       </div>
